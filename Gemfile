@@ -66,3 +66,7 @@ group :test do
 end
 
 gem "bcrypt", "~> 3.1"
+
+gem "sidekiq", "~> 8.1"
+
+gem "letter_opener_web", "~> 3.0"
