@@ -6,5 +6,4 @@ class WelcomeEmailJob < ApplicationJob
     UserMailer.welcome_email(user).deliver_later
     puts "Welcome email sent to #{user.email}"
   end
-
 end
