@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_03_10_124134) do
+ActiveRecord::Schema[8.1].define(version: 2026_03_12_122539) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "status_histories", force: :cascade do |t|
+    t.datetime "changed_at"
+    t.datetime "created_at", null: false
+    t.string "from_status"
+    t.bigint "task_id", null: false
+    t.string "to_status"
+    t.datetime "updated_at", null: false
+    t.index ["task_id"], name: "index_status_histories_on_task_id"
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -34,5 +44,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_10_124134) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "status_histories", "tasks"
   add_foreign_key "tasks", "users"
 end

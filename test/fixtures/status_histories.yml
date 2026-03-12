@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task: one
+  from_status: MyString
+  to_status: MyString
+  changed_at: 2026-03-12 12:25:39
+
+two:
+  task: two
+  from_status: MyString
+  to_status: MyString
+  changed_at: 2026-03-12 12:25:39
