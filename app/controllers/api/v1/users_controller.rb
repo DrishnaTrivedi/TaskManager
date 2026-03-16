@@ -1,6 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   protect_from_forgery with: :null_session
   before_action :set_user, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_request, only: [:create]
 
   def create 
     user = User.new(user_params)
@@ -41,3 +42,15 @@ class Api::V1::UsersController < ApplicationController
   end
 
 end
+
+
+
+
+
+
+# POST /api/v1/users          → signup (open)
+# POST /api/v1/auth/login     → login, get token (open)
+# GET  /api/v1/users/1/tasks  → protected, needs token
+# POST /api/v1/users/1/tasks  → protected, needs token
+# PUT  /api/v1/users/1/tasks/1 → protected, needs token
+# DELETE /api/v1/users/1/tasks/1 → protected, needs token
