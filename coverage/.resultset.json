@@ -1,0 +1,330 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/mnt/d/TaskManager/app/helpers/api/v1/tasks_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/helpers/api/v1/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/models/task.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          28,
+          1,
+          null,
+          null,
+          null,
+          1,
+          3,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          34,
+          null,
+          null,
+          1,
+          32,
+          null,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/validators/email_validator.rb": {
+        "lines": [
+          1,
+          1,
+          41,
+          6,
+          null,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/models/status_history.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/jobs/welcome_email_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/controllers/api/v1/auth_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          3,
+          3,
+          1,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          25,
+          25,
+          null,
+          25,
+          null,
+          17,
+          17,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          8,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/controllers/concerns/exception_handler.rb": {
+        "lines": [
+          1,
+          1,
+          1
+        ]
+      },
+      "/mnt/d/TaskManager/app/lib/json_web_token.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          18,
+          18,
+          null,
+          null,
+          1,
+          17,
+          17,
+          null,
+          0,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/controllers/api/v1/tasks_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          4,
+          null,
+          null,
+          1,
+          7,
+          null,
+          3,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          4,
+          null,
+          null,
+          1,
+          7,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/d/TaskManager/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/mnt/d/TaskManager/app/mailers/user_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      }
+    },
+    "timestamp": 1773662728
+  }
+}
