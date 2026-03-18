@@ -3,8 +3,14 @@ class Api::V1::TasksController < ApplicationController
   before_action :set_task, only: [:show, :update, :destroy]
 
   def index
+    @tasks = @current_user.tasks
 
-    @tasks = @current_user.tasks.page(params[:page]).per(params[:per_size] || 5)
+    # filtering
+    @tasks = @tasks.where(status: params[:status])                          if params[:status].present?
+    @tasks = @tasks.where(priority: params[:priority])                      if params[:priority].present?
+    @tasks = @tasks.where("title LIKE ?", "%#{params[:search]}%")           if params[:search].present?
+
+    @tasks = @tasks.page(params[:page]).per(params[:per_size] || 5)
     render json: {
       tasks: @tasks,
       meta: {
