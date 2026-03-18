@@ -78,3 +78,5 @@ gem "sidekiq", "~> 8.1"
 gem "letter_opener_web", "~> 3.0"
 
 gem "jwt", "~> 3.1"
+
+gem "active_model_serializers"
