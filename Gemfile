@@ -80,3 +80,5 @@ gem "letter_opener_web", "~> 3.0"
 gem "jwt", "~> 3.1"
 
 gem "active_model_serializers"
+
+gem "kaminari", "~> 1.2"

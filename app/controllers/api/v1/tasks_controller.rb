@@ -1,9 +1,19 @@
+# require 'kaminari'
 class Api::V1::TasksController < ApplicationController
   before_action :set_task, only: [:show, :update, :destroy]
 
   def index
-    @tasks = @current_user.tasks
-    render json: @tasks, status: :ok
+
+    @tasks = @current_user.tasks.page(params[:page]).per(params[:per_size] || 5)
+    render json: {
+      tasks: @tasks,
+      meta: {
+        current_page: @tasks.current_page,
+        total_pages: @tasks.total_pages,
+        total_count: @tasks.total_count,
+        per_page: @tasks.limit_value
+      }
+    }, status: :ok
   end
 
   def create

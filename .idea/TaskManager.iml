@@ -87,6 +87,10 @@
     <orderEntry type="library" scope="PROVIDED" name="jsonapi-renderer (v0.2.2, rbenv: 3.4.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jwt (v3.1.2, rbenv: 3.4.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="kamal (v2.10.1, rbenv: 3.4.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari (v1.2.2, rbenv: 3.4.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-actionview (v1.2.2, rbenv: 3.4.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-activerecord (v1.2.2, rbenv: 3.4.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-core (v1.2.2, rbenv: 3.4.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="language_server-protocol (v3.17.0.5, rbenv: 3.4.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="launchy (v3.1.1, rbenv: 3.4.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="letter_opener (v1.10.0, rbenv: 3.4.8) [gem]" level="application" />
