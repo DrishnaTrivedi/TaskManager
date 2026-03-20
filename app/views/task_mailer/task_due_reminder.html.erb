@@ -1,0 +1,9 @@
+<h1>Task Due Soon!</h1>
+<p>Hi <%= @user.name %>,</p>
+<p>Your task <strong><%= @task.title %></strong> is due soon!</p>
+<ul>
+  <li><strong>Due Date:</strong> <%= @task.due_date&.strftime("%B %d, %Y") %></li>
+  <li><strong>Status:</strong> <%= @task.status %></li>
+  <li><strong>Priority:</strong> <%= @task.priority %></li>
+</ul>
+<p>Please make sure to complete it on time!</p>

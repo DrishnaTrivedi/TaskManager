@@ -1,0 +1,10 @@
+<h1>New Task Created!</h1>
+<p>Hi <%= @user.name %>,</p>
+<p>A new task has been created for you:</p>
+<ul>
+  <li><strong>Title:</strong> <%= @task.title %></li>
+  <li><strong>Description:</strong> <%= @task.description %></li>
+  <li><strong>Priority:</strong> <%= @task.priority %></li>
+  <li><strong>Due Date:</strong> <%= @task.due_date&.strftime("%B %d, %Y") %></li>
+  <li><strong>Status:</strong> <%= @task.status %></li>
+</ul>

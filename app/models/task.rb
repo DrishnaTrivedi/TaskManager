@@ -1,6 +1,8 @@
 class Task < ApplicationRecord
     before_update :track_status_change 
     has_many :status_histories, dependent: :destroy
+    after_create :send_task_created_email
+    after_create :schedule_due_reminder
 
     belongs_to :user
     validates :title, presence: true
@@ -24,4 +26,9 @@ class Task < ApplicationRecord
         )
         end
     end
+
+    def send_task_created_email
+        TaskMailer.task_created(self).deliver_later
+    end
+
 end
