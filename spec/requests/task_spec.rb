@@ -35,6 +35,27 @@ RSpec.describe 'Tasks', type: :request do
         expect(json['meta']['total_count']).to eq(10)
       end
     end
+
+    context 'filtering' do
+      it 'returns the filtered results when filtered by status' do
+        create(:task, user: user, status: :pending)
+        create(:task, user: user, status: :completed)
+        get "/api/v1/users/#{user.id}/tasks", params: {status: pending}, headers: headers
+        json = JSON.parse(response.body)
+        expect(json['tasks'].length).to eq(1)
+        expect(json['tasks'].first['status']).to eq('pending')
+      end
+
+      it 'returns the filtered results when filtered by priority' do
+        create(:task, user: user, priority: 'low')
+        create(:task, user: user, priority: 'high')
+        get "/api/v1/users/#{user.id}/tasks", params: {priority: 'high'}, headers: headers
+        json = JSON.parse(response.body)
+        expect(json['tasks'].length).to eq(1)
+        expect(json['tasks'].first['priority']).to eq('high')
+      end
+
+    end
   end
 
   describe 'POST /api/v1/users/:user_id/tasks' do
