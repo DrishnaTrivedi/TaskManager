@@ -62,8 +62,18 @@ RSpec.describe 'Tasks', type: :request do
         json = JSON.parse(response.body)
         expect(json['tasks'].length).to eq(1)
         expect(json['tasks'].first['title']).to eq('Build API')
-
       end
+
+      it 'returns filtered results when filtered by more than 1 parameter' do
+      create(:task, user: user, title: 'Build API', status: 'in progress')
+      create(:task, user: user, title: 'Write tests', status: 'in progress')
+      create(:task, user: user, title: 'Build BLog application', status: 'completed')
+      get "/api/v1/users/#{user.id}/tasks", params: {search: 'Build', status: 'completed'}, headers: headers
+      json = JSON.parse(response.body)
+      expect(json['tasks'].length).to eq(1)
+      expect(json['tasks'].first['title']).to eq('Build BLog application')
+      expect(json['tasks'].first['status']).to eq('completed')
+    end
 
     end
   end
