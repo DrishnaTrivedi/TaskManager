@@ -1,3 +1,4 @@
+
 class Task < ApplicationRecord
     before_update :track_status_change 
     has_many :status_histories, dependent: :destroy
@@ -29,6 +30,12 @@ class Task < ApplicationRecord
 
     def send_task_created_email
         TaskMailer.task_created(self).deliver_later
+    end
+
+    def schedule_due_reminder
+        return unless due_date.present?
+        reminder_time = due_date - 24.hours
+        TaskReminderJob.set(wait_until: reminder_time).perform_later(id)
     end
 
 end
