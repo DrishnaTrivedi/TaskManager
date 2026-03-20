@@ -55,6 +55,16 @@ RSpec.describe 'Tasks', type: :request do
         expect(json['tasks'].first['priority']).to eq('high')
       end
 
+      it 'returns the correct results when searched by title' do
+        create(:task, user: user, title: 'Build API')
+        create(:task, user: user, title: 'Write tests')
+        get "/api/v1/users/#{user.id}/tasks", params: {search: 'Build'}, headers: headers
+        json = JSON.parse(response.body)
+        expect(json['tasks'].length).to eq(1)
+        expect(json['tasks'].first['title']).to eq('Build API')
+
+      end
+
     end
   end
 
