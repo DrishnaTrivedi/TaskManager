@@ -12,6 +12,7 @@ RSpec.describe 'Tasks', type: :request do
         task
         get "/api/v1/users/#{user.id}/tasks", headers: headers
         expect(response).to have_http_status(:ok)
+        json = JSON.parse(response.body)
         expect(json).to have_key('tasks')
         expect(json).to have_key('meta')
         expect(json['tasks'].length).to eq(1)
@@ -40,7 +41,7 @@ RSpec.describe 'Tasks', type: :request do
       it 'returns the filtered results when filtered by status' do
         create(:task, user: user, status: :pending)
         create(:task, user: user, status: :completed)
-        get "/api/v1/users/#{user.id}/tasks", params: {status: pending}, headers: headers
+        get "/api/v1/users/#{user.id}/tasks", params: {status: 'pending'}, headers: headers
         json = JSON.parse(response.body)
         expect(json['tasks'].length).to eq(1)
         expect(json['tasks'].first['status']).to eq('pending')
