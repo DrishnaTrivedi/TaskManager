@@ -12,7 +12,9 @@ RSpec.describe 'Tasks', type: :request do
         task
         get "/api/v1/users/#{user.id}/tasks", headers: headers
         expect(response).to have_http_status(:ok)
-        expect(JSON.parse(response.body).length).to eq(1)
+        expect(json).to have_key('tasks')
+        expect(json).to have_key('meta')
+        expect(json['tasks'].length).to eq(1)
       end
     end
 
@@ -20,6 +22,17 @@ RSpec.describe 'Tasks', type: :request do
       it 'returns 401' do
         get "/api/v1/users/#{user.id}/tasks"
         expect(response).to have_http_status(:unauthorized)
+      end
+    end
+
+    context 'pagination' do
+      it 'returns paginated results' do
+        create_list(:task, 10, user: user)
+        get "/api/v1/users/#{user.id}/tasks", params: { page: 1, per_page: 5 }, headers: headers
+        json = JSON.parse(response.body)
+        expect(json['tasks'].length).to eq(5)
+        expect(json['meta']['per_page']).to eq(5)
+        expect(json['meta']['total_count']).to eq(10)
       end
     end
   end
