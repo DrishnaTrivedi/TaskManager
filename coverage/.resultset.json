@@ -19,29 +19,12 @@
           null
         ]
       },
-      "/home/drishna/Desktop/ROR/TaskManager/app/mailers/task_mailer.rb": {
+      "/home/drishna/Desktop/ROR/TaskManager/app/mailers/user_mailer.rb": {
         "lines": [
           1,
-          null,
           1,
           4,
           4,
-          4,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          4,
-          4,
-          4,
-          null,
-          null,
-          null,
-          4,
-          null,
-          null,
           null,
           null,
           null,
@@ -73,11 +56,11 @@
           null,
           1,
           1,
-          8,
+          4,
           null,
           null,
           1,
-          8,
+          4,
           null,
           null
         ]
@@ -93,7 +76,7 @@
         "lines": [
           1,
           1,
-          8,
+          4,
           0,
           null,
           null
@@ -119,65 +102,6 @@
           null,
           null,
           null,
-          null,
-          null
-        ]
-      },
-      "/home/drishna/Desktop/ROR/TaskManager/app/models/task.rb": {
-        "lines": [
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          8,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          8,
-          null,
-          null,
-          1,
-          8,
-          8,
-          8,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/drishna/Desktop/ROR/TaskManager/app/jobs/task_reminder_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
           null,
           null
         ]
@@ -370,6 +294,21 @@
         ],
         "branches": {}
       },
+      "/home/drishna/Desktop/ROR/TaskManager/app/jobs/task_reminder_job.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
       "/home/drishna/Desktop/ROR/TaskManager/app/lib/json_web_token.rb": {
         "lines": [
           0,
@@ -390,9 +329,10 @@
         ],
         "branches": {}
       },
-      "/home/drishna/Desktop/ROR/TaskManager/app/mailers/user_mailer.rb": {
+      "/home/drishna/Desktop/ROR/TaskManager/app/mailers/task_mailer.rb": {
         "lines": [
           0,
+          null,
           0,
           0,
           0,
@@ -400,7 +340,23 @@
           0,
           0,
           0,
-          0
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null
         ],
         "branches": {}
       },
@@ -408,6 +364,52 @@
         "lines": [
           0,
           0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/drishna/Desktop/ROR/TaskManager/app/models/task.rb": {
+        "lines": [
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
           0
         ],
         "branches": {}
@@ -468,6 +470,6 @@
         "branches": {}
       }
     },
-    "timestamp": 1774245968
+    "timestamp": 1774246696
   }
 }
