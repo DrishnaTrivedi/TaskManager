@@ -82,3 +82,5 @@ gem "jwt", "~> 3.1"
 gem "active_model_serializers"
 
 gem "kaminari", "~> 1.2"
+
+gem "rack-cors", "~> 3.0"

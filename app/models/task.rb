@@ -29,7 +29,7 @@ class Task < ApplicationRecord
     end
 
     def send_task_created_email
-        TaskMailer.task_created(self).deliver_later
+        TaskMailer.task_created(self).deliver_now
     end
 
     def schedule_due_reminder

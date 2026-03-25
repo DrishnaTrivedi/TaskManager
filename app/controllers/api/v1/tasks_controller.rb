@@ -10,7 +10,7 @@ class Api::V1::TasksController < ApplicationController
     @tasks = @tasks.where(priority: params[:priority])                      if params[:priority].present?
     @tasks = @tasks.where("title LIKE ?", "%#{params[:search]}%")           if params[:search].present?
 
-    @tasks = @tasks.page(params[:page]).per(params[:per_size] || 5)
+    @tasks = @tasks.page(params[:page]).per(params[:per_size] || 15)
     render json: {
       tasks: @tasks,
       meta: {
